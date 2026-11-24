@@ -13,7 +13,7 @@ function run(code,inp){
   if(sp<push)return end(T.u);if(sp-push+pop>S)return end(T.o);pc=nx;
   let a,b,v;
   switch(x){
-   case 0:return {stdout:out.slice(0,z),exit:0,trap:null,steps:k};
+   case 0:return end(0);
    case 1:d[sp++]=(code[nx-1]<<24)>>24;break;
    case 2:d[sp++]=code[nx-4]|code[nx-3]<<8|code[nx-2]<<16|code[nx-1]<<24;break;
    case 3:sp--;break;
