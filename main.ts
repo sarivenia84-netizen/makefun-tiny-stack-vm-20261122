@@ -5,7 +5,7 @@ const T={u:2,o:3,d:4,b:5,m:6,c:7,r:8,p:9,s:10,w:11};
 const spec={0:[0,0,0],1:[1,0,1],2:[4,0,1],3:[0,1,0],4:[0,1,2],5:[0,2,2],6:[0,2,3],7:[0,3,3],16:[0,2,1],17:[0,2,1],18:[0,2,1],19:[0,2,1],20:[0,2,1],21:[0,2,1],22:[0,2,1],23:[0,1,1],24:[0,2,1],25:[0,2,1],26:[0,2,1],27:[0,1,1],28:[0,2,1],29:[0,2,1],30:[0,2,1],32:[0,2,1],33:[0,2,1],34:[0,2,1],48:[2,0,0],49:[2,1,0],50:[2,1,0],51:[2,0,0],52:[0,0,0],64:[0,1,1],65:[0,2,0],80:[0,1,0],81:[0,1,0],82:[0,0,1],83:[0,1,0]};
 function run(code,inp){
  let d=new Int32Array(S),c=new Int32Array(C),m=new Int32Array(N),out=new Uint8Array(O),sp=0,cp=0,ip=0,pc=0,z=0,k=0,n=code.length;
- const end=e=>({stdout:out.slice(0,z),exit:e,trap:e,steps:k});
+ const end=e=>({stdout:out.slice(0,z),exit:e});
  for(;;){
   if(k===L)return end(T.s); if(pc<0||pc>=n)return end(T.p);
   let x=code[pc],q=spec[x];if(!q)return end(T.b);let [im,push,pop]=q;
