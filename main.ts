@@ -33,7 +33,7 @@ function run(code,inp){
    case 80:v=Buffer.from(String(d[--sp]));if(z+v.length>O)return end(T.w);out.set(v,z);z+=v.length;break;
    case 81:if(z===O)return end(T.w);out[z++]=d[--sp]&255;break;
    case 82:d[sp++]=ip<inp.length?inp[ip++]:-1;break;
-   case 83:return {stdout:out.slice(0,z),exit:d[--sp]&255,trap:null,steps:k};
+   case 83:return end(d[--sp]&255);
    default:
     b=d[--sp];a=d[--sp];
     switch(x){
