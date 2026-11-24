@@ -6,7 +6,7 @@ function run(code,inp){
  let d=new Int32Array(S),c=new Int32Array(C),m=new Int32Array(N),out=new Uint8Array(O),sp=0,cp=0,ip=0,pc=0,z=0,k=0,n=code.length;
  const end=e=>({stdout:out.slice(0,z),exit:e});
  for(;;){
-  if(k===L)return end(T.s); if(pc<0||pc>=n)return end(T.p);
+  if(k===L)return end(T.s);if(pc<0||pc>=n)return end(T.p);
   let x=code[pc],q=spec[x];if(!q)return end(T.b);let [im,push,pop]=q;
   if(pc+im>=n)return end(T.p);k++;let nx=pc+im+1;
   if(sp<push)return end(T.u);if(sp-push+pop>S)return end(T.o);pc=nx;
