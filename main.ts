@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 const fs=require('node:fs'),path=require('node:path');
 const S=256,C=64,N=256,L=1e6,O=65536;
 const T={u:2,o:3,d:4,b:5,m:6,c:7,r:8,p:9,s:10,w:11};
